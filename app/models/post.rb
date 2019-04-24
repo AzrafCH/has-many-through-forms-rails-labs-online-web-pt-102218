@@ -6,5 +6,5 @@ class Post < ActiveRecord::Base
 
   def categories_attributes=(categories_hashes)
 
-  end 
+  end
 end
