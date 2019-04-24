@@ -11,7 +11,10 @@
 </p>
 
 <% #How can i build a checkbox for each category %>
-<label for ="category_id_1">Cool</label><input type = "checkbox" name = "?" value = "1">
+<% Category.each do |c| %>
+<p>
+<label for ="category_id_<%= c.id %>"><%= c.name %></label>
+<input type = "checkbox" name = "post[category_ids]" value = "<%= c.id %>">
 
 <%= f.submit %>
 <% end %>
